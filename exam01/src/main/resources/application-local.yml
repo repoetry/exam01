@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+      connection-init-sql: SELECT 1 FROM DUAL
+      validationTimeout: 5000
+
+    type: com.zaxxer.hikari.HikariDataSource
+
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:oracle:thin:@leerueDB_medium?TNS_ADMIN=C:/home/tomcat/server/Wallet_leerueDB
+    username: DB_USERNAME
+    password: DB_PASSWORD
