@@ -3,7 +3,6 @@ server:
     session:
       timeout: 1800
 
-
 spring:
   profiles:
     active: local
@@ -16,3 +15,10 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+
+mybatis:
+  configuration:
+    jdbc-type-for-null: "null"
+    map-underscore-to-camel-case: true
+  mapper-locations:
+    - classpath:sqlMap/**/*Mapper.xml

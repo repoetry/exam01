@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="info.rue.example.exam01.mapper.Exam01Mapper">
+
+    <select id="getCurrentDateTime" resultType="string">
+/* info.rue.example.exam01.mapper.Exam01Mapper getCurrentDateTime */
+SELECT  TO_CHAR(CURRENT_DATE, 'YYYYMMDDHH24MISS') AS DB_CURRENT_DATETIME
+  FROM  DUAL
+    </select>
+
+</mapper>
